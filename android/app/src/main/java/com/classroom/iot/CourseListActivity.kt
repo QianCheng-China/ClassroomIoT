@@ -16,11 +16,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.classroom.iot.databinding.ActivityCourseListBinding
 import com.classroom.iot.model.CourseInfo
 import com.classroom.iot.network.ApiClient
-import com.classroom.iot.util.PreferenceManager
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import java.time.temporal.ChronoUnit
+import java.text.SimpleDateFormat
+import java.util.Calendar
+import java.util.Date
+import java.util.Locale
 
 class CourseListActivity : AppCompatActivity() {
     private lateinit var b: ActivityCourseListBinding
@@ -28,13 +30,19 @@ class CourseListActivity : AppCompatActivity() {
     private var selDate = ""
     private var refreshJob: Job? = null
 
+    // 统一使用兼容 Android 7.0 的时间格式化工具
+    private val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+    private val monthDayFormat = SimpleDateFormat("MM/dd", Locale.getDefault())
+
     override fun onCreate(s: Bundle?) {
         super.onCreate(s)
         b = ActivityCourseListBinding.inflate(layoutInflater)
         setContentView(b.root)
         b.rvCourses.layoutManager = LinearLayoutManager(this)
         val p = (application as ClassroomIoTApp).prefs
-        api = ApiClient("http://${p.serverIp}:${p.serverPort}")
+
+        api = ApiClient("http://${p.serverIp}:${p.serverPort}", p.token ?: "")
+
         b.toolbar.title = "板书查看"
         b.toolbar.setNavigationOnClickListener { finish() }
         loadDates()
@@ -60,7 +68,7 @@ class CourseListActivity : AppCompatActivity() {
         refreshJob = lifecycleScope.launch {
             while (true) {
                 fetchAndShowCourses()
-                delay(3000) // 每 3 秒静默刷新一次课程状态
+                delay(3000)
             }
         }
     }
@@ -79,25 +87,49 @@ class CourseListActivity : AppCompatActivity() {
                     b.rvCourses.visibility = View.GONE
                     return@launch
                 }
-                selDate = if (r.dates.contains(java.time.LocalDate.now().toString())) java.time.LocalDate.now().toString() else r.dates.first()
+
+                // 【修复】使用 Calendar 替代 java.time.LocalDate.now()
+                val todayStr = dateFormat.format(Date())
+                selDate = if (r.dates.contains(todayStr)) todayStr else r.dates.first()
+
                 buildChips(r.dates)
             } catch (e: Exception) {
-                Toast.makeText(this@CourseListActivity, "失败", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@CourseListActivity, "加载日期失败: ${e.message}", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
     private fun buildChips(dates: List<String>) {
         b.dateSelector.removeAllViews()
-        val today = java.time.LocalDate.now()
+
+        // 【修复】获取今天零点的时间戳用于计算天数差
+        val calToday = Calendar.getInstance().apply {
+            set(Calendar.HOUR_OF_DAY, 0)
+            set(Calendar.MINUTE, 0)
+            set(Calendar.SECOND, 0)
+            set(Calendar.MILLISECOND, 0)
+        }
+        val todayTime = calToday.timeInMillis
+
         for (d in dates) {
-            val dd = java.time.LocalDate.parse(d)
-            val diff = ChronoUnit.DAYS.between(dd, today)
-            val txt = when (diff) {
+            val dateObj = dateFormat.parse(d)
+            if (dateObj == null) continue
+
+            val calD = Calendar.getInstance().apply { time = dateObj }
+            calD.set(Calendar.HOUR_OF_DAY, 0)
+            calD.set(Calendar.MINUTE, 0)
+            calD.set(Calendar.SECOND, 0)
+            calD.set(Calendar.MILLISECOND, 0)
+
+            // 计算日期差值（毫秒转天）
+            val diffDays = (todayTime - calD.timeInMillis) / (1000 * 60 * 60 * 24)
+
+            val txt = when (diffDays) {
                 0L -> "今天"
                 1L -> "昨天"
-                else -> dd.format(java.time.format.DateTimeFormatter.ofPattern("MM/dd"))
+                else -> monthDayFormat.format(dateObj)
             }
+
             val c = com.google.android.material.chip.Chip(this).apply {
                 text = txt
                 isClickable = true
@@ -107,10 +139,10 @@ class CourseListActivity : AppCompatActivity() {
             }
             c.setOnClickListener {
                 selDate = d
-                for (i in 0 until b.dateSelector.childCount)
+                for (i in 0 until b.dateSelector.childCount) {
                     (b.dateSelector.getChildAt(i) as com.google.android.material.chip.Chip).isChecked = false
+                }
                 c.isChecked = true
-                // 切换日期时立即重启刷新器
                 stopAutoRefresh()
                 startAutoRefresh()
             }
@@ -131,7 +163,6 @@ class CourseListActivity : AppCompatActivity() {
                     b.rvCourses.visibility = View.VISIBLE
                     val adapter = b.rvCourses.adapter as? CAdapter
                     if (adapter != null) {
-                        // 复用现有 Adapter，只更新数据，防止列表闪烁
                         adapter.updateData(r.courses)
                     } else {
                         b.rvCourses.adapter = CAdapter(r.courses) { co ->
@@ -149,14 +180,11 @@ class CourseListActivity : AppCompatActivity() {
                     }
                 }
             } catch (_: Exception) {
-                // 静默处理刷新时的网络波动，不弹 Toast
             }
         }
     }
 
     inner class CAdapter(private var l: List<CourseInfo>, private val cb: (CourseInfo) -> Unit) : RecyclerView.Adapter<CAdapter.VH>() {
-
-        // 新增：供外部实时刷新数据的方法
         fun updateData(newList: List<CourseInfo>) {
             l = newList
             notifyDataSetChanged()

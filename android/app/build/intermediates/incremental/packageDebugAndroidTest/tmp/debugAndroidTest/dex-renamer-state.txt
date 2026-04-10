@@ -1,0 +1,4 @@
+#Fri Apr 03 12:58:39 CST 2026
+base.0=/Users/admin/Desktop/Classroom IoT/v0.1.0/android/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/0/classes.dex
+path.0=0/classes.dex
+renamed.0=classes.dex

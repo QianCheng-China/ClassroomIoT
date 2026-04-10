@@ -1,0 +1,66 @@
+[
+    {
+        "merged": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-debug-35:/layout_activity_course_list.xml.flat",
+        "source": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-main-37:/layout/activity_course_list.xml"
+    },
+    {
+        "merged": "com.classroom.iot.app-debug-35:/xml_file_paths.xml.flat",
+        "source": "com.classroom.iot.app-main-37:/xml/file_paths.xml"
+    },
+    {
+        "merged": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-debug-35:/menu_bottom_nav_menu.xml.flat",
+        "source": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-main-37:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-debug-35:/layout_fragment_function.xml.flat",
+        "source": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-main-37:/layout/fragment_function.xml"
+    },
+    {
+        "merged": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-debug-35:/layout_activity_course_detail.xml.flat",
+        "source": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-main-37:/layout/activity_course_detail.xml"
+    },
+    {
+        "merged": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-debug-35:/layout_activity_login.xml.flat",
+        "source": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-main-37:/layout/activity_login.xml"
+    },
+    {
+        "merged": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-debug-35:/layout_activity_server_list.xml.flat",
+        "source": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-main-37:/layout/activity_server_list.xml"
+    },
+    {
+        "merged": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-debug-35:/xml_network_security_config.xml.flat",
+        "source": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-main-37:/xml/network_security_config.xml"
+    },
+    {
+        "merged": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-debug-35:/layout_activity_about.xml.flat",
+        "source": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-main-37:/layout/activity_about.xml"
+    },
+    {
+        "merged": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-debug-35:/layout_fragment_mine.xml.flat",
+        "source": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-main-37:/layout/fragment_mine.xml"
+    },
+    {
+        "merged": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-debug-35:/layout_activity_account_management.xml.flat",
+        "source": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-main-37:/layout/activity_account_management.xml"
+    },
+    {
+        "merged": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-debug-35:/layout_item_course.xml.flat",
+        "source": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-main-37:/layout/item_course.xml"
+    },
+    {
+        "merged": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-debug-35:/drawable_bg_state_tag.xml.flat",
+        "source": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-main-37:/drawable/bg_state_tag.xml"
+    },
+    {
+        "merged": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-debug-35:/layout_activity_change_password.xml.flat",
+        "source": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-main-37:/layout/activity_change_password.xml"
+    },
+    {
+        "merged": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-debug-35:/layout_item_server.xml.flat",
+        "source": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-main-37:/layout/item_server.xml"
+    },
+    {
+        "merged": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-debug-35:/layout_activity_main.xml.flat",
+        "source": "/Users/admin/.gradle/daemon/9.0.0/com.classroom.iot.app-main-37:/layout/activity_main.xml"
+    }
+]

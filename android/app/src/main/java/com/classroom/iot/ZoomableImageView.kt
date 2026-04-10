@@ -1,6 +1,7 @@
 package com.classroom.iot
 
 import android.content.Context
+import android.graphics.Canvas
 import android.graphics.Matrix
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
@@ -8,164 +9,187 @@ import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.ScaleGestureDetector
 import androidx.appcompat.widget.AppCompatImageView
+import kotlin.math.cos
+import kotlin.math.sin
 
 class ZoomableImageView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : AppCompatImageView(context, attrs, defStyleAttr) {
 
-    private val matrix = Matrix()
-    private val scaleGestureDetector: ScaleGestureDetector
-    private val gestureDetector: GestureDetector
-    var currentRotation = 0f
-        private set
+    // 抛弃从 Matrix 里取值的错误做法，改为独立维护状态变量
+    private var scale = 1f
+    private var rotation = 0f
+    private var transX = 0f
+    private var transY = 0f
 
-    // 记录初始适配屏幕时的基准缩放比例
-    private var baseScale = 1f
+    private val matrix = Matrix()
+
+    private val scaleDetector: ScaleGestureDetector
+    private val gestureDetector: GestureDetector
+
+    private var lastTouchX = 0f
+    private var lastTouchY = 0f
+    private var isScaling = false
 
     init {
         scaleType = ScaleType.MATRIX
-        imageMatrix = matrix
-
-        scaleGestureDetector = ScaleGestureDetector(context, object : ScaleGestureDetector.SimpleOnScaleGestureListener() {
-            override fun onScale(detector: ScaleGestureDetector): Boolean {
-                val values = FloatArray(9)
-                matrix.getValues(values)
-                val currentScale = values[Matrix.MSCALE_X]
-
-                // 计算当前相对于原始尺寸的实际缩放倍数
-                val actualScale = currentScale / baseScale
-                val targetScale = actualScale * detector.scaleFactor
-
-                // 严格限制缩放比例在 80% - 300%
-                if (targetScale < 0.8f || targetScale > 3.0f) return false
-
-                matrix.postScale(detector.scaleFactor, detector.scaleFactor, detector.focusX, detector.focusY)
-
-                // 缩放后立即校正边界，防止图片漂移
-                correctBounds()
-                imageMatrix = matrix
-                return true
-            }
-        })
-
-        gestureDetector = GestureDetector(context, object : GestureDetector.SimpleOnGestureListener() {
-            override fun onDoubleTap(e: MotionEvent): Boolean {
-                resetTransform()
-                return true
-            }
-
-            override fun onScroll(e1: MotionEvent?, e2: MotionEvent, distanceX: Float, distanceY: Float): Boolean {
-                if (scaleGestureDetector.isInProgress) return false
-
-                val values = FloatArray(9)
-                matrix.getValues(values)
-                val currentScale = values[Matrix.MSCALE_X]
-
-                // 只有放大超过原始大小 (留 5% 容差) 时才允许拖动
-                if (currentScale <= baseScale * 1.05f) return false
-
-                var transX = values[Matrix.MTRANS_X] - distanceX
-                var transY = values[Matrix.MTRANS_Y] - distanceY
-
-                val d = drawable ?: return false
-                val scaledWidth = d.intrinsicWidth * currentScale
-                val scaledHeight = d.intrinsicHeight * currentScale
-
-                // 限制：边缘不能超过原始图片位置的中心，即最多只能露出多出部分的一半
-                val maxTransX = if (scaledWidth > width) (scaledWidth - width) / 2f else 0f
-                val maxTransY = if (scaledHeight > height) (scaledHeight - height) / 2f else 0f
-
-                if (maxTransX > 0) {
-                    transX = transX.coerceIn(-maxTransX, maxTransX)
-                } else {
-                    transX = (width - scaledWidth) / 2f // 比屏幕小时强制居中
-                }
-
-                if (maxTransY > 0) {
-                    transY = transY.coerceIn(-maxTransY, maxTransY)
-                } else {
-                    transY = (height - scaledHeight) / 2f // 比屏幕小时强制居中
-                }
-
-                values[Matrix.MTRANS_X] = transX
-                values[Matrix.MTRANS_Y] = transY
-                matrix.setValues(values)
-                imageMatrix = matrix
-                return true
-            }
-        })
+        scaleDetector = ScaleGestureDetector(context, ScaleListener())
+        gestureDetector = GestureDetector(context, GestureListener())
     }
 
-    override fun onTouchEvent(event: MotionEvent): Boolean {
-        scaleGestureDetector.onTouchEvent(event)
-        gestureDetector.onTouchEvent(event)
-        return true
+    // 核心绘制逻辑：按照严格的数学顺序重建矩阵
+    override fun onDraw(canvas: Canvas) {
+        val drawable = drawable ?: return
+        val dw = drawable.intrinsicWidth.toFloat()
+        val dh = drawable.intrinsicHeight.toFloat()
+        if (dw <= 0 || dh <= 0) return
+
+        matrix.reset()
+        // 1. 将图片原点移至自身中心
+        matrix.postTranslate(-dw / 2f, -dh / 2f)
+        // 2. 缩放
+        matrix.postScale(scale, scale)
+        // 3. 在【未旋转的局部坐标系】下平移
+        matrix.postTranslate(transX, transY)
+        // 4. 绕原点旋转（此时原点就是图片中心）
+        matrix.postRotate(rotation)
+        // 5. 将整个坐标系移回屏幕中心（死死钉在正中间，绝对不会跑偏）
+        matrix.postTranslate(width / 2f, height / 2f)
+
+        imageMatrix = matrix
+        super.onDraw(canvas)
     }
 
     override fun setImageDrawable(drawable: Drawable?) {
         super.setImageDrawable(drawable)
-        post { resetTransform() }
+        if (drawable != null) resetTransform()
     }
 
     fun resetTransform() {
-        currentRotation = 0f
-        matrix.reset()
-        val d = drawable ?: return
-        val viewWidth = width.toFloat()
-        val viewHeight = height.toFloat()
-        val drawableWidth = d.intrinsicWidth.toFloat()
-        val drawableHeight = d.intrinsicHeight.toFloat()
-
-        if (drawableWidth <= 0 || drawableHeight <= 0 || viewWidth <= 0 || viewHeight <= 0) return
-
-        baseScale = Math.min(viewWidth / drawableWidth, viewHeight / drawableHeight)
-        val dx = (viewWidth - drawableWidth * baseScale) * 0.5f
-        val dy = (viewHeight - drawableHeight * baseScale) * 0.5f
-        matrix.setScale(baseScale, baseScale)
-        matrix.postTranslate(dx, dy)
-        imageMatrix = matrix
+        scale = calculateFitScale(0f)
+        rotation = 0f
+        transX = 0f
+        transY = 0f
+        invalidate()
     }
 
     fun rotateImage() {
-        currentRotation += 90f
-        if (currentRotation >= 360f) currentRotation -= 360f
-        val viewWidth = width.toFloat()
-        val viewHeight = height.toFloat()
-        matrix.postRotate(90f, viewWidth / 2f, viewHeight / 2f)
-
-        // 旋转后由于宽高互换，必须重新校正边界防止越界
-        correctBounds()
-        imageMatrix = matrix
+        rotation = (rotation + 90) % 360
+        // 旋转后如果超出了屏幕，自动缩小适配
+        val newFitScale = calculateFitScale(rotation)
+        if (scale > newFitScale) {
+            scale = newFitScale
+        }
+        fixTranslation()
+        invalidate()
     }
 
-    // 核心边界校正逻辑，供缩放和旋转调用
-    private fun correctBounds() {
-        val d = drawable ?: return
-        val values = FloatArray(9)
-        matrix.getValues(values)
-        val currentScale = values[Matrix.MSCALE_X]
-        val scaledWidth = d.intrinsicWidth * currentScale
-        val scaledHeight = d.intrinsicHeight * currentScale
+    // 计算适配屏幕的基础缩放比例（考虑了旋转后的宽高互换）
+    private fun calculateFitScale(rot: Float): Float {
+        val drawable = drawable ?: return 1f
+        val dw = drawable.intrinsicWidth.toFloat()
+        val dh = drawable.intrinsicHeight.toFloat()
+        if (dw <= 0 || dh <= 0) return 1f
 
-        var transX = values[Matrix.MTRANS_X]
-        var transY = values[Matrix.MTRANS_Y]
+        val viewW = width.toFloat()
+        val viewH = height.toFloat()
+        if (viewW <= 0 || viewH <= 0) return 1f
 
-        if (scaledWidth <= width) {
-            transX = (width - scaledWidth) / 2f // 强制水平居中
+        // 90度或270度时，宽高逻辑互换
+        val effectiveW = if (rot == 90f || rot == 270f) dh else dw
+        val effectiveH = if (rot == 90f || rot == 270f) dw else dh
+
+        val scaleX = viewW / effectiveW
+        val scaleY = viewH / effectiveH
+        return kotlin.math.min(scaleX, scaleY)
+    }
+
+    // 核心边界限制：基于局部坐标系，无论怎么转，左右上下绝对对称
+    private fun fixTranslation() {
+        val drawable = drawable ?: return
+        val dw = drawable.intrinsicWidth.toFloat()
+        val dh = drawable.intrinsicHeight.toFloat()
+        val scaledW = dw * scale
+        val scaledH = dh * scale
+        val viewW = width.toFloat()
+        val viewH = height.toFloat()
+
+        if (scaledW <= viewW) {
+            transX = 0f // 图片比屏幕小，强制居中
         } else {
-            val maxTransX = (scaledWidth - width) / 2f
-            transX = transX.coerceIn(-maxTransX, maxTransX)
+            val minX = (viewW - scaledW) / 2f
+            val maxX = (scaledW - viewW) / 2f
+            transX = transX.coerceIn(minX, maxX)
         }
 
-        if (scaledHeight <= height) {
-            transY = (height - scaledHeight) / 2f // 强制垂直居中
+        if (scaledH <= viewH) {
+            transY = 0f
         } else {
-            val maxTransY = (scaledHeight - height) / 2f
-            transY = transY.coerceIn(-maxTransY, maxTransY)
+            val minY = (viewH - scaledH) / 2f
+            val maxY = (scaledH - viewH) / 2f
+            transY = transY.coerceIn(minY, maxY)
+        }
+        invalidate()
+    }
+
+    override fun onTouchEvent(event: MotionEvent): Boolean {
+        scaleDetector.onTouchEvent(event)
+        if (!isScaling) gestureDetector.onTouchEvent(event)
+
+        when (event.actionMasked) {
+            MotionEvent.ACTION_DOWN -> {
+                lastTouchX = event.x
+                lastTouchY = event.y
+            }
+            MotionEvent.ACTION_MOVE -> {
+                if (!isScaling) {
+                    val dx = event.x - lastTouchX
+                    val dy = event.y - lastTouchY
+
+                    // 【最关键修复】将屏幕手指滑动的增量，通过三角函数逆变换，映射到图片的局部坐标系
+                    val radian = Math.toRadians(rotation.toDouble())
+                    val localDx = (dx * cos(radian) + dy * sin(radian)).toFloat()
+                    val localDy = (-dx * sin(radian) + dy * cos(radian)).toFloat()
+
+                    transX += localDx
+                    transY += localDy
+                    fixTranslation()
+
+                    lastTouchX = event.x
+                    lastTouchY = event.y
+                }
+            }
+        }
+        return true
+    }
+
+    private inner class ScaleListener : ScaleGestureDetector.SimpleOnScaleGestureListener() {
+        override fun onScaleBegin(detector: ScaleGestureDetector): Boolean {
+            isScaling = true
+            return true
         }
 
-        values[Matrix.MTRANS_X] = transX
-        values[Matrix.MTRANS_Y] = transY
-        matrix.setValues(values)
+        override fun onScale(detector: ScaleGestureDetector): Boolean {
+            val newScale = scale * detector.scaleFactor
+            val fitScale = calculateFitScale(rotation)
+            // 限制缩放范围：最小缩小到一半，最大放大5倍
+            scale = newScale.coerceIn(fitScale * 0.5f, fitScale * 5f)
+            fixTranslation()
+            return true
+        }
+
+        override fun onScaleEnd(detector: ScaleGestureDetector) {
+            isScaling = false
+        }
+    }
+
+    private inner class GestureListener : GestureDetector.SimpleOnGestureListener() {
+        override fun onDoubleTap(e: MotionEvent): Boolean {
+            val fitScale = calculateFitScale(rotation)
+            // 双击在“原始大小”和“放大2.5倍”之间丝滑切换
+            scale = if (scale > fitScale * 1.1f) fitScale else fitScale * 2.5f
+            fixTranslation()
+            return true
+        }
     }
 }

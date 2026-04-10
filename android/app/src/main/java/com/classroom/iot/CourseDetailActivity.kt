@@ -12,7 +12,6 @@ import androidx.lifecycle.lifecycleScope
 import coil.load
 import com.classroom.iot.databinding.ActivityCourseDetailBinding
 import com.classroom.iot.network.ApiClient
-import com.classroom.iot.util.PreferenceManager
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -40,12 +39,12 @@ class CourseDetailActivity : AppCompatActivity() {
         val st = intent.getStringExtra("s") ?: ""
         val en = intent.getStringExtra("e") ?: ""
         cState = intent.getStringExtra("st") ?: "finished"
+
         val p = (application as ClassroomIoTApp).prefs
-        api = ApiClient("http://${p.serverIp}:${p.serverPort}")
+        api = ApiClient("http://${p.serverIp}:${p.serverPort}", p.token ?: "")
 
         b.toolbar.title = "$n $st-$en"
         b.toolbar.setNavigationOnClickListener { finish() }
-
         b.btnRotate.setOnClickListener { b.ivPhoto.rotateImage() }
         b.btnReset.setOnClickListener { b.ivPhoto.resetTransform() }
 
@@ -69,9 +68,7 @@ class CourseDetailActivity : AppCompatActivity() {
                     showImg(p)
                 }
             }
-
             override fun onStartTrackingTouch(s: SeekBar?) {}
-
             override fun onStopTrackingTouch(s: SeekBar?) {
                 if (b.seekBar.progress >= b.seekBar.max - 1) manualScroll = false
             }
@@ -81,16 +78,10 @@ class CourseDetailActivity : AppCompatActivity() {
         cm.registerNetworkCallback(
             NetworkRequest.Builder().build(),
             object : ConnectivityManager.NetworkCallback() {
-                override fun onLost(network: android.net.Network) {
-                    runOnUiThread { checkAndShowOfflineDialog() }
-                }
-
-                override fun onAvailable(network: android.net.Network) {
-                    runOnUiThread { isOfflineDialogShowing = false }
-                }
+                override fun onLost(network: android.net.Network) { runOnUiThread { checkAndShowOfflineDialog() } }
+                override fun onAvailable(network: android.net.Network) { runOnUiThread { isOfflineDialogShowing = false } }
             }
         )
-
         loadImgs()
     }
 
@@ -104,16 +95,9 @@ class CourseDetailActivity : AppCompatActivity() {
             isOfflineDialogShowing = true
             AlertDialog.Builder(this)
                 .setMessage("检查Internet连接")
-                .setPositiveButton("返回“功能”页") { _, _ ->
-                    isOfflineDialogShowing = false
-                    finish()
-                }
-                .setNegativeButton("重试") { _, _ ->
-                    isOfflineDialogShowing = false
-                    recreate()
-                }
-                .setCancelable(false)
-                .show()
+                .setPositiveButton("返回“功能”页") { _, _ -> isOfflineDialogShowing = false; finish() }
+                .setNegativeButton("重试") { _, _ -> isOfflineDialogShowing = false; recreate() }
+                .setCancelable(false).show()
         }
     }
 
@@ -137,7 +121,7 @@ class CourseDetailActivity : AppCompatActivity() {
                 showImg(curI)
                 if (cState == "running") startPoll() else stopPoll()
             } catch (e: Exception) {
-                Toast.makeText(this@CourseDetailActivity, "失败", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@CourseDetailActivity, "加载失败: ${e.message}", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -147,16 +131,32 @@ class CourseDetailActivity : AppCompatActivity() {
         curI = i
         b.ivPhoto.resetTransform()
         b.progressBar.visibility = View.VISIBLE
+
+        b.ivPhoto.load(null)
+
+        val p = (application as ClassroomIoTApp).prefs
         b.ivPhoto.load(api.getImageUrl(dateStr, cIdx, curType, imgs[i])) {
+            addHeader("Authorization", "Bearer ${p.token}")
+
+            // 【关键修复】强制限制解码尺寸为 1080p，防止超大 PNG 导致内存溢出(OOM)黑屏
+            size(1920, 1080)
+
             crossfade(true)
-            listener { _, _ -> b.progressBar.visibility = View.GONE }
+            // 用个显眼的警告图标，如果还失败就不会再是“纯黑屏”了
+            error(android.R.drawable.ic_dialog_alert)
+
+            listener(onError = { _, _ ->
+                b.progressBar.visibility = View.GONE
+            }) { _, _ ->
+                b.progressBar.visibility = View.GONE
+            }
         }
 
-        // 【新增】提取文件名中的生成时间 (例如从 "08.30.15-1.png" 截取 "08.30.15")
         val fileName = imgs[i]
         val timeStr = fileName.substringBefore("-")
         b.tvProgress.text = "第 ${i + 1} 张 / 共 ${imgs.size} 张\n生成时间: $timeStr"
     }
+
 
     private fun startPoll() {
         stopPoll()
@@ -187,5 +187,7 @@ class CourseDetailActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         stopPoll()
+        // 页面销毁时清理请求
+        b.ivPhoto.load(null)
     }
 }
