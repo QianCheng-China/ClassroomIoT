@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootServerList"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:title="选择服务器"
+        app:titleTextColor="@android:color/white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvServers"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:padding="8dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center_vertical">
+
+            <ProgressBar
+                android:id="@+id/progressScan"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="8dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvScanning"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="准备扫描..."
+                android:textSize="14sp"
+                android:textColor="#666666" />
+
+            <ImageButton
+                android:id="@+id/btnRescan"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_rotate"
+                android:contentDescription="重新扫描"
+                android:padding="8dp" />
+
+            <ImageButton
+                android:id="@+id/btnManualInput"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_edit"
+                android:contentDescription="手动输入"
+                android:padding="8dp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

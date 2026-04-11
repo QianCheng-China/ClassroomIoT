@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLogin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarLogin"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:title="账号登录"
+        app:titleTextColor="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeColor="#E0E0E0"
+            app:strokeWidth="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_menu_manage" />
+                <TextView
+                    android:id="@+id/tvSelectedServer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:textColor="#444444"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="用户名"
+            app:boxCornerRadiusTopStart="12dp" app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp" app:boxCornerRadiusBottomEnd="12dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:longClickable="false"
+                android:textIsSelectable="false"
+                android:contextClickable="false"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="密码"
+            app:boxCornerRadiusTopStart="12dp" app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp" app:boxCornerRadiusBottomEnd="12dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:longClickable="false"
+                android:textIsSelectable="false"
+                android:contextClickable="false"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- 新的错误提示卡片布局 -->
+        <LinearLayout
+            android:id="@+id/layoutMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:visibility="gone">
+            <ImageView android:id="@+id/ivMsgIcon" android:layout_width="20dp" android:layout_height="20dp" />
+            <TextView android:id="@+id/tvMsgText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBack"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="返回"
+                android:textColor="@color/colorPrimary"
+                app:cornerRadius="12dp"
+                app:strokeColor="@color/colorPrimary"
+                app:strokeWidth="1dp" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="登录"
+                app:cornerRadius="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

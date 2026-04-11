@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- 顶部标题栏 -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:titleTextColor="@android:color/white"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:title="板书查看" />
+
+    <!-- 日期选择器（横向滑动的 Chip 容器） -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:background="@android:color/white"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_marginBottom="8dp">
+
+        <!-- 这里的 id 必须是 dateSelector，且必须是 LinearLayout，因为代码里用了 addView -->
+        <LinearLayout
+            android:id="@+id/dateSelector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp"/>
+
+    </HorizontalScrollView>
+
+    <!-- 框架布局，用来把列表和“空提示”叠在一起 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 课程列表 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCourses"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="16dp"/>
+
+        <!-- 暂无数据时的提示文字 -->
+        <TextView
+            android:id="@+id/tvEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="当前日期暂无课程数据"
+            android:textSize="16sp"
+            android:textColor="#999999"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@android:color/white"
+        app:navigationIcon="@android:drawable/ic_menu_revert" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#1A1A1A">
+
+        <!-- 替换为自定义的 ZoomableImageView -->
+        <com.classroom.iot.ZoomableImageView
+            android:id="@+id/ivPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="板书照片" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvEmptyImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="暂无图片"
+            android:textColor="#666666"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:paddingTop="12dp">
+
+        <!-- 将选择器和按钮放在同一行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="16dp">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:singleSelection="true"
+                app:selectionRequired="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipMultimedia"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/type_multimedia"
+                    android:checked="true" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipBlackboardL"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/type_blackboardL" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipBlackboardR"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/type_blackboardR" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <!-- 旋转按钮 -->
+            <ImageButton
+                android:id="@+id/btnRotate"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_rotate"
+                android:contentDescription="旋转图片" />
+
+            <!-- 恢复默认按钮 -->
+            <ImageButton
+                android:id="@+id/btnReset"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_revert"
+                android:contentDescription="恢复默认" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="16dp">
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="100" />
+
+            <TextView
+                android:id="@+id/tvProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="第 0 张 / 共 0 张"
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary"
+                android:gravity="center"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

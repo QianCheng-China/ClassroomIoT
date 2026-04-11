@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "com.classroom.iot.app-mergeDebugResources-34:/layout/activity_server_list.xml",
+        "source": "com.classroom.iot.app-main-37:/layout/activity_server_list.xml"
+    },
+    {
+        "merged": "com.classroom.iot.app-mergeDebugResources-34:/layout/activity_about.xml",
+        "source": "com.classroom.iot.app-main-37:/layout/activity_about.xml"
+    },
+    {
+        "merged": "com.classroom.iot.app-mergeDebugResources-34:/layout/activity_change_password.xml",
+        "source": "com.classroom.iot.app-main-37:/layout/activity_change_password.xml"
+    },
+    {
+        "merged": "com.classroom.iot.app-mergeDebugResources-34:/layout/fragment_function.xml",
+        "source": "com.classroom.iot.app-main-37:/layout/fragment_function.xml"
+    },
+    {
+        "merged": "com.classroom.iot.app-mergeDebugResources-34:/layout/item_course.xml",
+        "source": "com.classroom.iot.app-main-37:/layout/item_course.xml"
+    },
+    {
+        "merged": "com.classroom.iot.app-mergeDebugResources-34:/layout/activity_login.xml",
+        "source": "com.classroom.iot.app-main-37:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.classroom.iot.app-mergeDebugResources-34:/layout/item_server.xml",
+        "source": "com.classroom.iot.app-main-37:/layout/item_server.xml"
+    },
+    {
+        "merged": "com.classroom.iot.app-mergeDebugResources-34:/layout/activity_account_management.xml",
+        "source": "com.classroom.iot.app-main-37:/layout/activity_account_management.xml"
+    },
+    {
+        "merged": "com.classroom.iot.app-mergeDebugResources-34:/layout/activity_course_detail.xml",
+        "source": "com.classroom.iot.app-main-37:/layout/activity_course_detail.xml"
+    },
+    {
+        "merged": "com.classroom.iot.app-mergeDebugResources-34:/layout/activity_main.xml",
+        "source": "com.classroom.iot.app-main-37:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.classroom.iot.app-mergeDebugResources-34:/layout/fragment_mine.xml",
+        "source": "com.classroom.iot.app-main-37:/layout/fragment_mine.xml"
+    },
+    {
+        "merged": "com.classroom.iot.app-mergeDebugResources-34:/layout/activity_course_list.xml",
+        "source": "com.classroom.iot.app-main-37:/layout/activity_course_list.xml"
+    }
+]

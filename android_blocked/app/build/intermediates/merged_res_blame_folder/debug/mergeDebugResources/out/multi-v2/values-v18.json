@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.classroom.iot.app-mergeDebugResources-33:/values-v18/values-v18.xml",
+            "map": [
+                {
+                    "source": "/Users/admin/.gradle/caches/9.0.0/transforms/aa4fc603ea6b0e7d60272923d31713a6/transformed/appcompat-1.6.1/res/values-v18/values-v18.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "48",
+                        "endOffsets": "99"
+                    }
+                }
+            ]
+        }
+    ]
+}
