@@ -29,10 +29,10 @@ com.classroom.iot.app-lifecycle-livedata-core-ktx-2.7.0-27 /Users/admin/.gradle/
 com.classroom.iot.app-appcompat-resources-1.6.1-28 /Users/admin/.gradle/caches/9.0.0/transforms/ecc22a9b8ee198f14997e69cfe718ec8/transformed/appcompat-resources-1.6.1/res
 com.classroom.iot.app-savedstate-1.2.1-29 /Users/admin/.gradle/caches/9.0.0/transforms/ed450cb51d6dfd08d74b226202c63087/transformed/savedstate-1.2.1/res
 com.classroom.iot.app-viewpager2-1.1.0-beta02-30 /Users/admin/.gradle/caches/9.0.0/transforms/fcfdbc15db9303a95ce4875cba79d6fb/transformed/viewpager2-1.1.0-beta02/res
-com.classroom.iot.app-pngs-31 /Users/admin/Documents/ClassroomIoT/android_special/app/build/generated/res/pngs/debug
-com.classroom.iot.app-resValues-32 /Users/admin/Documents/ClassroomIoT/android_special/app/build/generated/res/resValues/debug
-com.classroom.iot.app-packageDebugResources-33 /Users/admin/Documents/ClassroomIoT/android_special/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
-com.classroom.iot.app-packageDebugResources-34 /Users/admin/Documents/ClassroomIoT/android_special/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
-com.classroom.iot.app-debug-35 /Users/admin/Documents/ClassroomIoT/android_special/app/build/intermediates/merged_res/debug/mergeDebugResources
-com.classroom.iot.app-debug-36 /Users/admin/Documents/ClassroomIoT/android_special/app/src/debug/res
-com.classroom.iot.app-main-37 /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/res
+com.classroom.iot.app-pngs-31 /Users/admin/Documents/ClassroomIoT/android_blocked/app/build/generated/res/pngs/debug
+com.classroom.iot.app-resValues-32 /Users/admin/Documents/ClassroomIoT/android_blocked/app/build/generated/res/resValues/debug
+com.classroom.iot.app-packageDebugResources-33 /Users/admin/Documents/ClassroomIoT/android_blocked/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+com.classroom.iot.app-packageDebugResources-34 /Users/admin/Documents/ClassroomIoT/android_blocked/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+com.classroom.iot.app-debug-35 /Users/admin/Documents/ClassroomIoT/android_blocked/app/build/intermediates/merged_res/debug/mergeDebugResources
+com.classroom.iot.app-debug-36 /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/debug/res
+com.classroom.iot.app-main-37 /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/res

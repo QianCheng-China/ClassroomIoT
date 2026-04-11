@@ -1,4 +1,4 @@
-com.classroom.iot.test.app-androidTest-0 /Users/admin/Desktop/Classroom IoT/v0.1.0/android/app/build/generated/res/resValues/androidTest/debug
-com.classroom.iot.test.app-mergeDebugAndroidTestResources-1 /Users/admin/Desktop/Classroom IoT/v0.1.0/android/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
-com.classroom.iot.test.app-mergeDebugAndroidTestResources-2 /Users/admin/Desktop/Classroom IoT/v0.1.0/android/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
-com.classroom.iot.test.app-debugAndroidTest-3 /Users/admin/Desktop/Classroom IoT/v0.1.0/android/app/build/intermediates/merged_res/debugAndroidTest/mergeDebugAndroidTestResources
+com.classroom.iot.test.app-androidTest-0 /Users/admin/Documents/ClassroomIoT/android_blocked/app/build/generated/res/resValues/androidTest/debug
+com.classroom.iot.test.app-mergeDebugAndroidTestResources-1 /Users/admin/Documents/ClassroomIoT/android_blocked/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.classroom.iot.test.app-mergeDebugAndroidTestResources-2 /Users/admin/Documents/ClassroomIoT/android_blocked/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.classroom.iot.test.app-debugAndroidTest-3 /Users/admin/Documents/ClassroomIoT/android_blocked/app/build/intermediates/merged_res/debugAndroidTest/mergeDebugAndroidTestResources

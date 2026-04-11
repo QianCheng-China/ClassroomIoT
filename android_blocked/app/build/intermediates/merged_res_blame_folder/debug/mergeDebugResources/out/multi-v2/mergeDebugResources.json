@@ -3552,25 +3552,6 @@
                     }
                 },
                 {
-                    "source": "/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/res/values/themes.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "16",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "288"
-                    },
-                    "to": {
-                        "startLines": "6381",
-                        "startColumns": "4",
-                        "startOffsets": "446374",
-                        "endLines": "6385",
-                        "endColumns": "12",
-                        "endOffsets": "446646"
-                    }
-                },
-                {
                     "source": "/Users/admin/.gradle/caches/9.0.0/transforms/ed450cb51d6dfd08d74b226202c63087/transformed/savedstate-1.2.1/res/values/values.xml",
                     "from": {
                         "startLines": "2",
@@ -3585,6 +3566,23 @@
                         "startOffsets": "123894",
                         "endColumns": "53",
                         "endOffsets": "123943"
+                    }
+                },
+                {
+                    "source": "/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/res/values/colors.xml",
+                    "from": {
+                        "startLines": "5,4,2,3,6,8,7,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "199,153,55,102,242,339,291,386",
+                        "endColumns": "42,45,46,50,48,46,47,48",
+                        "endOffsets": "237,194,97,148,286,381,334,430"
+                    },
+                    "to": {
+                        "startLines": "640,655,656,657,956,957,958,963",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "32798,33862,33908,33955,56212,56261,56308,56642",
+                        "endColumns": "42,45,46,50,48,46,47,48",
+                        "endOffsets": "32836,33903,33950,34001,56256,56303,56351,56686"
                     }
                 },
                 {
@@ -3694,23 +3692,6 @@
                     }
                 },
                 {
-                    "source": "/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/res/values/strings.xml",
-                    "from": {
-                        "startLines": "5,18,1,4,13,10,7,6,14,11,9,12,2,3,16,17,15,8",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "200,821,16,151,565,394,277,237,630,451,354,511,67,111,723,772,675,314",
-                        "endColumns": "36,40,50,48,64,56,36,39,44,59,39,53,43,39,48,48,47,39",
-                        "endOffsets": "232,857,62,195,625,446,309,272,670,506,389,560,106,146,767,816,718,349"
-                    },
-                    "to": {
-                        "startLines": "1976,1977,1979,1981,1999,2000,2011,2012,2119,2120,2121,2133,2137,2138,2139,2140,2141,2142",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "130764,130801,130925,131126,133152,133217,134268,134305,149858,149903,149963,151366,151839,151883,151923,151972,152021,152069",
-                        "endColumns": "36,40,50,48,64,56,36,39,44,59,39,53,43,39,48,48,47,39",
-                        "endOffsets": "130796,130837,130971,131170,133212,133269,134300,134340,149898,149958,149998,151415,151878,151918,151967,152016,152064,152104"
-                    }
-                },
-                {
                     "source": "/Users/admin/.gradle/caches/9.0.0/transforms/3869e4f152c4be95bb71c48a3ccd7990/transformed/cardview-1.0.0/res/values/values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,35,36,37,38,45,47,50,7",
@@ -3747,23 +3728,6 @@
                     }
                 },
                 {
-                    "source": "/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/res/values/colors.xml",
-                    "from": {
-                        "startLines": "5,4,2,3,6,8,7,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "199,153,55,102,242,339,291,386",
-                        "endColumns": "42,45,46,50,48,46,47,48",
-                        "endOffsets": "237,194,97,148,286,381,334,430"
-                    },
-                    "to": {
-                        "startLines": "640,655,656,657,956,957,958,963",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "32798,33862,33908,33955,56212,56261,56308,56642",
-                        "endColumns": "42,45,46,50,48,46,47,48",
-                        "endOffsets": "32836,33903,33950,34001,56256,56303,56351,56686"
-                    }
-                },
-                {
                     "source": "/Users/admin/.gradle/caches/9.0.0/transforms/c2ec2c872dc8ff42961b84490d0dbdd2/transformed/recyclerview-1.3.2/res/values/values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
@@ -3780,6 +3744,25 @@
                         "endLines": "506,1110,1111,1112,1120,1121,1122,1809,12625",
                         "endColumns": "55,58,47,55,74,75,71,65,24",
                         "endOffsets": "25672,66418,66466,66522,67208,67284,67356,120568,764671"
+                    }
+                },
+                {
+                    "source": "/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/res/values/themes.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "288"
+                    },
+                    "to": {
+                        "startLines": "6381",
+                        "startColumns": "4",
+                        "startOffsets": "446374",
+                        "endLines": "6385",
+                        "endColumns": "12",
+                        "endOffsets": "446646"
                     }
                 },
                 {
@@ -3852,6 +3835,23 @@
                         "startOffsets": "121764,123834",
                         "endColumns": "41,59",
                         "endOffsets": "121801,123889"
+                    }
+                },
+                {
+                    "source": "/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "5,18,1,4,13,10,7,6,14,11,9,12,2,3,16,17,15,8",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "200,821,16,151,565,394,277,237,630,451,354,511,67,111,723,772,675,314",
+                        "endColumns": "36,40,50,48,64,56,36,39,44,59,39,53,43,39,48,48,47,39",
+                        "endOffsets": "232,857,62,195,625,446,309,272,670,506,389,560,106,146,767,816,718,349"
+                    },
+                    "to": {
+                        "startLines": "1976,1977,1979,1981,1999,2000,2011,2012,2119,2120,2121,2133,2137,2138,2139,2140,2141,2142",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "130764,130801,130925,131126,133152,133217,134268,134305,149858,149903,149963,151366,151839,151883,151923,151972,152021,152069",
+                        "endColumns": "36,40,50,48,64,56,36,39,44,59,39,53,43,39,48,48,47,39",
+                        "endOffsets": "130796,130837,130971,131170,133212,133269,134300,134340,149898,149958,149998,151415,151878,151918,151967,152016,152064,152104"
                     }
                 }
             ]

@@ -9,14 +9,14 @@
 9        android:targetSdkVersion="34" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:4:5-67
-11-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:4:22-64
+11-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:4:5-67
+11-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:4:22-64
 12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:5:5-79
-12-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:5:22-76
+12-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:5:5-79
+12-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:5:22-76
 13    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
-13-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:6:5-83
-13-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:6:22-80
+13-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:6:5-83
+13-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:6:22-80
 14
 15    <permission
 15-->[androidx.core:core:1.12.0] /Users/admin/.gradle/caches/9.0.0/transforms/9c8cf190427b635102c4c469ae5ade42/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
@@ -30,167 +30,166 @@
 19-->[androidx.core:core:1.12.0] /Users/admin/.gradle/caches/9.0.0/transforms/9c8cf190427b635102c4c469ae5ade42/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
 20
 21    <application
-21-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:8:5-53:19
+21-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:8:5-53:19
 22        android:name="com.classroom.iot.ClassroomIoTApp"
-22-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:9:9-40
+22-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:9:9-40
 23        android:allowBackup="true"
-23-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:10:9-35
+23-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:10:9-35
 24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 24-->[androidx.core:core:1.12.0] /Users/admin/.gradle/caches/9.0.0/transforms/9c8cf190427b635102c4c469ae5ade42/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
 25        android:debuggable="true"
 26        android:extractNativeLibs="false"
 27        android:icon="@android:drawable/sym_def_app_icon"
-27-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:11:9-58
+27-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:11:9-58
 28        android:label="@string/app_name"
-28-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:12:9-41
+28-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:12:9-41
 29        android:networkSecurityConfig="@xml/network_security_config"
-29-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:13:9-69
+29-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:13:9-69
 30        android:supportsRtl="true"
-30-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:14:9-35
-31        android:testOnly="true"
-32        android:theme="@style/Theme.ClassroomIoT" >
-32-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:15:9-50
-33        <activity
-33-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:16:9-18:40
-34            android:name="com.classroom.iot.AboutActivity"
-34-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:17:13-42
-35            android:exported="false" />
-35-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:18:13-37
-36        <activity
-36-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:19:9-21:40
-37            android:name="com.classroom.iot.ServerListActivity"
-37-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:20:13-47
-38            android:exported="false" />
-38-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:21:13-37
-39        <activity
-39-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:22:9-24:40
-40            android:name="com.classroom.iot.ChangePasswordActivity"
-40-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:23:13-51
-41            android:exported="false" />
-41-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:24:13-37
-42        <activity
-42-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:25:9-27:40
-43            android:name="com.classroom.iot.AccountManagementActivity"
-43-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:26:13-54
-44            android:exported="false" />
-44-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:27:13-37
-45        <activity
-45-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:28:9-30:40
-46            android:name="com.classroom.iot.LoginActivity"
-46-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:29:13-42
-47            android:exported="false" /> <!-- 启动入口改到这里 -->
-47-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:30:13-37
-48        <activity
-48-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:31:9-39:20
-49            android:name="com.classroom.iot.MainActivity"
-49-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:32:13-41
-50            android:exported="true" >
-50-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:33:13-36
-51            <intent-filter>
-51-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:34:13-38:29
-52                <action android:name="android.intent.action.MAIN" />
-52-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:35:17-69
-52-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:35:25-66
-53
-54                <category android:name="android.intent.category.LAUNCHER" />
-54-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:37:17-77
-54-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:37:27-74
-55            </intent-filter>
-56        </activity>
-57        <activity android:name="com.classroom.iot.CourseListActivity" />
-57-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:40:9-56
-57-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:40:19-53
-58        <activity android:name="com.classroom.iot.CourseDetailActivity" />
-58-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:41:9-58
-58-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:41:19-55
-59        <activity
-59-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:16:9-18:40
-60            android:name="com.classroom.iot.AboutActivity"
-60-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:17:13-42
-61            android:exported="false" />
-61-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:18:13-37
-62
-63        <provider
-64            android:name="androidx.core.content.FileProvider"
-64-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:44:13-62
-65            android:authorities="com.classroom.iot.fileprovider"
-65-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:45:13-64
-66            android:exported="false"
-66-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:46:13-37
-67            android:grantUriPermissions="true" >
-67-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:47:13-47
-68            <meta-data
-68-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:48:13-50:54
-69                android:name="android.support.FILE_PROVIDER_PATHS"
-69-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:49:17-67
-70                android:resource="@xml/file_paths" />
-70-->/Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:50:17-51
-71        </provider>
-72        <provider
-72-->[androidx.emoji2:emoji2:1.2.0] /Users/admin/.gradle/caches/9.0.0/transforms/c8a07462e6ba8fc296664cd069036f8f/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-73            android:name="androidx.startup.InitializationProvider"
-73-->[androidx.emoji2:emoji2:1.2.0] /Users/admin/.gradle/caches/9.0.0/transforms/c8a07462e6ba8fc296664cd069036f8f/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
-74            android:authorities="com.classroom.iot.androidx-startup"
-74-->[androidx.emoji2:emoji2:1.2.0] /Users/admin/.gradle/caches/9.0.0/transforms/c8a07462e6ba8fc296664cd069036f8f/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
-75            android:exported="false" >
-75-->[androidx.emoji2:emoji2:1.2.0] /Users/admin/.gradle/caches/9.0.0/transforms/c8a07462e6ba8fc296664cd069036f8f/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
-76            <meta-data
-76-->[androidx.emoji2:emoji2:1.2.0] /Users/admin/.gradle/caches/9.0.0/transforms/c8a07462e6ba8fc296664cd069036f8f/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-77                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-77-->[androidx.emoji2:emoji2:1.2.0] /Users/admin/.gradle/caches/9.0.0/transforms/c8a07462e6ba8fc296664cd069036f8f/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
-78                android:value="androidx.startup" />
-78-->[androidx.emoji2:emoji2:1.2.0] /Users/admin/.gradle/caches/9.0.0/transforms/c8a07462e6ba8fc296664cd069036f8f/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
-79            <meta-data
-79-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/admin/.gradle/caches/9.0.0/transforms/a8b2d385ab403a6305d42abcb368e66f/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
-80                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-80-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/admin/.gradle/caches/9.0.0/transforms/a8b2d385ab403a6305d42abcb368e66f/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
-81                android:value="androidx.startup" />
-81-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/admin/.gradle/caches/9.0.0/transforms/a8b2d385ab403a6305d42abcb368e66f/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
-82            <meta-data
-82-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
-83                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-83-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
-84                android:value="androidx.startup" />
-84-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
-85        </provider>
-86
-87        <receiver
-87-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
-88            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-88-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
-89            android:directBootAware="false"
-89-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
-90            android:enabled="true"
-90-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
-91            android:exported="true"
-91-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
-92            android:permission="android.permission.DUMP" >
-92-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
-93            <intent-filter>
-93-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
-94                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-94-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
-94-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
-95            </intent-filter>
-96            <intent-filter>
-96-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
-97                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-97-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
-97-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
-98            </intent-filter>
-99            <intent-filter>
-99-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
-100                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-100-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
-100-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
-101            </intent-filter>
-102            <intent-filter>
-102-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
-103                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-103-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
-103-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
-104            </intent-filter>
-105        </receiver>
-106    </application>
-107
-108</manifest>
+30-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:14:9-35
+31        android:theme="@style/Theme.ClassroomIoT" >
+31-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:15:9-50
+32        <activity
+32-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:16:9-18:40
+33            android:name="com.classroom.iot.AboutActivity"
+33-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:17:13-42
+34            android:exported="false" />
+34-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:18:13-37
+35        <activity
+35-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:19:9-21:40
+36            android:name="com.classroom.iot.ServerListActivity"
+36-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:20:13-47
+37            android:exported="false" />
+37-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:21:13-37
+38        <activity
+38-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:22:9-24:40
+39            android:name="com.classroom.iot.ChangePasswordActivity"
+39-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:23:13-51
+40            android:exported="false" />
+40-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:24:13-37
+41        <activity
+41-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:25:9-27:40
+42            android:name="com.classroom.iot.AccountManagementActivity"
+42-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:26:13-54
+43            android:exported="false" />
+43-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:27:13-37
+44        <activity
+44-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:28:9-30:40
+45            android:name="com.classroom.iot.LoginActivity"
+45-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:29:13-42
+46            android:exported="false" /> <!-- 启动入口改到这里 -->
+46-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:30:13-37
+47        <activity
+47-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:31:9-39:20
+48            android:name="com.classroom.iot.MainActivity"
+48-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:32:13-41
+49            android:exported="true" >
+49-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:33:13-36
+50            <intent-filter>
+50-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:34:13-38:29
+51                <action android:name="android.intent.action.MAIN" />
+51-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:35:17-69
+51-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:35:25-66
+52
+53                <category android:name="android.intent.category.LAUNCHER" />
+53-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:37:17-77
+53-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:37:27-74
+54            </intent-filter>
+55        </activity>
+56        <activity android:name="com.classroom.iot.CourseListActivity" />
+56-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:40:9-56
+56-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:40:19-53
+57        <activity android:name="com.classroom.iot.CourseDetailActivity" />
+57-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:41:9-58
+57-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:41:19-55
+58        <activity
+58-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:16:9-18:40
+59            android:name="com.classroom.iot.AboutActivity"
+59-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:17:13-42
+60            android:exported="false" />
+60-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:18:13-37
+61
+62        <provider
+63            android:name="androidx.core.content.FileProvider"
+63-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:44:13-62
+64            android:authorities="com.classroom.iot.fileprovider"
+64-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:45:13-64
+65            android:exported="false"
+65-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:46:13-37
+66            android:grantUriPermissions="true" >
+66-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:47:13-47
+67            <meta-data
+67-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:48:13-50:54
+68                android:name="android.support.FILE_PROVIDER_PATHS"
+68-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:49:17-67
+69                android:resource="@xml/file_paths" />
+69-->/Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:50:17-51
+70        </provider>
+71        <provider
+71-->[androidx.emoji2:emoji2:1.2.0] /Users/admin/.gradle/caches/9.0.0/transforms/c8a07462e6ba8fc296664cd069036f8f/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+72            android:name="androidx.startup.InitializationProvider"
+72-->[androidx.emoji2:emoji2:1.2.0] /Users/admin/.gradle/caches/9.0.0/transforms/c8a07462e6ba8fc296664cd069036f8f/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+73            android:authorities="com.classroom.iot.androidx-startup"
+73-->[androidx.emoji2:emoji2:1.2.0] /Users/admin/.gradle/caches/9.0.0/transforms/c8a07462e6ba8fc296664cd069036f8f/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+74            android:exported="false" >
+74-->[androidx.emoji2:emoji2:1.2.0] /Users/admin/.gradle/caches/9.0.0/transforms/c8a07462e6ba8fc296664cd069036f8f/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+75            <meta-data
+75-->[androidx.emoji2:emoji2:1.2.0] /Users/admin/.gradle/caches/9.0.0/transforms/c8a07462e6ba8fc296664cd069036f8f/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+76                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+76-->[androidx.emoji2:emoji2:1.2.0] /Users/admin/.gradle/caches/9.0.0/transforms/c8a07462e6ba8fc296664cd069036f8f/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+77                android:value="androidx.startup" />
+77-->[androidx.emoji2:emoji2:1.2.0] /Users/admin/.gradle/caches/9.0.0/transforms/c8a07462e6ba8fc296664cd069036f8f/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+78            <meta-data
+78-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/admin/.gradle/caches/9.0.0/transforms/a8b2d385ab403a6305d42abcb368e66f/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+79                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+79-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/admin/.gradle/caches/9.0.0/transforms/a8b2d385ab403a6305d42abcb368e66f/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+80                android:value="androidx.startup" />
+80-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/admin/.gradle/caches/9.0.0/transforms/a8b2d385ab403a6305d42abcb368e66f/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+81            <meta-data
+81-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+82                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+82-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+83                android:value="androidx.startup" />
+83-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+84        </provider>
+85
+86        <receiver
+86-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+87            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+87-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+88            android:directBootAware="false"
+88-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+89            android:enabled="true"
+89-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+90            android:exported="true"
+90-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+91            android:permission="android.permission.DUMP" >
+91-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+92            <intent-filter>
+92-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+93                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+93-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+93-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+94            </intent-filter>
+95            <intent-filter>
+95-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+96                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+96-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+96-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+97            </intent-filter>
+98            <intent-filter>
+98-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+99                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+99-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+99-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+100            </intent-filter>
+101            <intent-filter>
+101-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+102                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+102-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+102-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/admin/.gradle/caches/9.0.0/transforms/19f6cf376c72bc1fa3ed071b795c9fa1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+103            </intent-filter>
+104        </receiver>
+105    </application>
+106
+107</manifest>

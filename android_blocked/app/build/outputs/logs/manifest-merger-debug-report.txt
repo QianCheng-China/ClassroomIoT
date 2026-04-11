@@ -1,20 +1,20 @@
 -- Merging decision tree log ---
 provider#androidx.core.content.FileProvider
-INJECTED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:43:9-51:20
+INJECTED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:43:9-51:20
 	android:grantUriPermissions
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:47:13-47
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:47:13-47
 	android:authorities
-		INJECTED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:45:13-64
+		INJECTED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:45:13-64
 	android:exported
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:46:13-37
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:46:13-37
 	android:name
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:44:13-62
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:44:13-62
 manifest
-ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:2:1-55:12
+ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:2:1-55:12
+INJECTED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:2:1-55:12
+INJECTED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:2:1-55:12
+INJECTED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:2:1-55:12
 MERGED from [androidx.databinding:viewbinding:8.8.0] /Users/admin/.gradle/caches/9.0.0/transforms/489eeb92e1ace53e86126131d36ee429/transformed/viewbinding-8.8.0/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.11.0] /Users/admin/.gradle/caches/9.0.0/transforms/c4492b3573e29c62483ff5bd33f8657a/transformed/material-1.11.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/admin/.gradle/caches/9.0.0/transforms/9ed56531cf1aba30313201c522ccd51c/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
@@ -64,28 +64,28 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/admin/.gradle/cach
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/admin/.gradle/caches/9.0.0/transforms/bb6955d8f096ea2aa899d60c088e29fe/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /Users/admin/.gradle/caches/9.0.0/transforms/6d8e6ba97881a66a8f512cb93339575f/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 	package
-		INJECTED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:4:5-67
+ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:4:5-67
 	android:name
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:4:22-64
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:4:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:5:5-79
+ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:5:5-79
 	android:name
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:5:22-76
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:5:22-76
 uses-permission#android.permission.REQUEST_INSTALL_PACKAGES
-ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:6:5-83
+ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:6:5-83
 	android:name
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:6:22-80
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:6:22-80
 application
-ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:8:5-53:19
-INJECTED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:8:5-53:19
+ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:8:5-53:19
+INJECTED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:8:5-53:19
 MERGED from [com.google.android.material:material:1.11.0] /Users/admin/.gradle/caches/9.0.0/transforms/c4492b3573e29c62483ff5bd33f8657a/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] /Users/admin/.gradle/caches/9.0.0/transforms/c4492b3573e29c62483ff5bd33f8657a/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/admin/.gradle/caches/9.0.0/transforms/9ed56531cf1aba30313201c522ccd51c/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
@@ -103,87 +103,87 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/admin/.gradle/caches
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/admin/.gradle/caches/9.0.0/transforms/bf4fa307e0fe1dc0f7c9f3f594519174/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/admin/.gradle/caches/9.0.0/transforms/bf4fa307e0fe1dc0f7c9f3f594519174/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
 	android:extractNativeLibs
-		INJECTED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.12.0] /Users/admin/.gradle/caches/9.0.0/transforms/9c8cf190427b635102c4c469ae5ade42/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:14:9-35
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:12:9-41
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:12:9-41
 	android:icon
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:11:9-58
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:11:9-58
 	android:allowBackup
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:10:9-35
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:10:9-35
 	android:theme
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:15:9-50
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:15:9-50
 	android:networkSecurityConfig
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:13:9-69
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:13:9-69
 	android:name
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:9:9-40
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:9:9-40
 activity#com.classroom.iot.AboutActivity
-ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:16:9-18:40
+ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:16:9-18:40
 	android:exported
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:18:13-37
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:18:13-37
 	android:name
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:17:13-42
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:17:13-42
 activity#com.classroom.iot.ServerListActivity
-ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:19:9-21:40
+ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:19:9-21:40
 	android:exported
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:21:13-37
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:21:13-37
 	android:name
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:20:13-47
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:20:13-47
 activity#com.classroom.iot.ChangePasswordActivity
-ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:22:9-24:40
+ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:22:9-24:40
 	android:exported
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:24:13-37
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:24:13-37
 	android:name
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:23:13-51
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:23:13-51
 activity#com.classroom.iot.AccountManagementActivity
-ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:25:9-27:40
+ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:25:9-27:40
 	android:exported
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:27:13-37
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:26:13-54
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:26:13-54
 activity#com.classroom.iot.LoginActivity
-ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:28:9-30:40
+ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:28:9-30:40
 	android:exported
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:30:13-37
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:30:13-37
 	android:name
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:29:13-42
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:29:13-42
 activity#com.classroom.iot.MainActivity
-ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:31:9-39:20
+ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:31:9-39:20
 	android:exported
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:33:13-36
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:33:13-36
 	android:name
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:32:13-41
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:32:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:34:13-38:29
+ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:34:13-38:29
 action#android.intent.action.MAIN
-ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:35:17-69
+ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:35:17-69
 	android:name
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:35:25-66
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:35:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:37:17-77
+ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:37:17-77
 	android:name
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:37:27-74
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:37:27-74
 activity#com.classroom.iot.CourseListActivity
-ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:40:9-56
+ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:40:9-56
 	android:name
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:40:19-53
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:40:19-53
 activity#com.classroom.iot.CourseDetailActivity
-ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:41:9-58
+ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:41:9-58
 	android:name
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:41:19-55
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:41:19-55
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:48:13-50:54
+ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:48:13-50:54
 	android:resource
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:50:17-51
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:50:17-51
 	android:name
-		ADDED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml:49:17-67
+		ADDED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml:49:17-67
 uses-sdk
-INJECTED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml
-INJECTED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml
+INJECTED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml
+INJECTED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml
 MERGED from [androidx.databinding:viewbinding:8.8.0] /Users/admin/.gradle/caches/9.0.0/transforms/489eeb92e1ace53e86126131d36ee429/transformed/viewbinding-8.8.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.databinding:viewbinding:8.8.0] /Users/admin/.gradle/caches/9.0.0/transforms/489eeb92e1ace53e86126131d36ee429/transformed/viewbinding-8.8.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.material:material:1.11.0] /Users/admin/.gradle/caches/9.0.0/transforms/c4492b3573e29c62483ff5bd33f8657a/transformed/material-1.11.0/AndroidManifest.xml:20:5-44
@@ -281,9 +281,9 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/
 MERGED from [androidx.print:print:1.0.0] /Users/admin/.gradle/caches/9.0.0/transforms/6d8e6ba97881a66a8f512cb93339575f/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] /Users/admin/.gradle/caches/9.0.0/transforms/6d8e6ba97881a66a8f512cb93339575f/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
 	android:targetSdkVersion
-		INJECTED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/admin/Documents/ClassroomIoT/android_special/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/admin/Documents/ClassroomIoT/android_blocked/app/src/main/AndroidManifest.xml
 provider#androidx.startup.InitializationProvider
 ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/admin/.gradle/caches/9.0.0/transforms/c8a07462e6ba8fc296664cd069036f8f/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
 MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/admin/.gradle/caches/9.0.0/transforms/a8b2d385ab403a6305d42abcb368e66f/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:24:9-32:20
